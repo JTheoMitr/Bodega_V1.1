@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
+
+    id 'kotlin-kapt'
 }
 
 android {
@@ -58,4 +60,12 @@ dependencies {
     //firebase
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.2'
     implementation platform('com.google.firebase:firebase-bom:29.0.2')
+
+    // Changes for Room and ViewModel
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.room:room-common:2.4.2'
+    implementation 'androidx.room:room-ktx:2.4.2'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    kapt "androidx.room:room-compiler:2.4.2"
 }

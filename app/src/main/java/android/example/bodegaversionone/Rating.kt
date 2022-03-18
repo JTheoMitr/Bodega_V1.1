@@ -1,6 +1,11 @@
 package android.example.bodegaversionone
 
 data class Rating(
-    val count: Int,
-    val rate: Double
-)
+    var count: Int,
+    var rate: Double
+) {
+    override fun toString(): String {
+        super.toString()
+        return ""+ count + ","+rate
+    }
+}
